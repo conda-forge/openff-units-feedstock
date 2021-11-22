@@ -25,6 +25,8 @@ requirements:
     - openff-utilities
 
 test:
+  requires:
+    - setuptools
   imports:
     - openff.units
     - openff.units.simtk
