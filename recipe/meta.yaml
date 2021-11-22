@@ -27,6 +27,8 @@ requirements:
 test:
   imports:
     - openff.units
+    - openff.units.simtk
+    - openff.units.openmm
 
 about:
   home: https://openforcefield.org/
