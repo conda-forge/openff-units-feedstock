@@ -29,7 +29,6 @@ test:
     - setuptools
   imports:
     - openff.units
-    - openff.units.simtk
     - openff.units.openmm
     - openff.units.elements
 
