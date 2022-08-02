@@ -23,6 +23,8 @@ requirements:
     - numpy
     - pint >=0.16.1
     - openff-utilities
+  run_constrained:
+    - openmm >7.6
 
 test:
   requires:
