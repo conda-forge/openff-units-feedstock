@@ -1,5 +1,5 @@
 {% set name = "openff-units" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-units/archive/{{ version }}.tar.gz
-  sha256: 8656a9a7ae3cbaf341a9f92e234c7c4794c23fb98ce4df9de53fb82852fca4f2
+  sha256: 9a09704b73bfcb2651350bbdb28985130a8c521fe649a7a2cd7676d7c668c3a7
 
 build:
   noarch: python
@@ -23,13 +23,14 @@ requirements:
     - numpy
     - pint >=0.19.0
     - openff-utilities
+  run_constrained:
+    - openmm >7.6
 
 test:
   requires:
     - setuptools
   imports:
     - openff.units
-    - openff.units.simtk
     - openff.units.openmm
     - openff.units.elements
 
