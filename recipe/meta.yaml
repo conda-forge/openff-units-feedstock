@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.8
     - numpy
-    - pint >=0.19.0
+    - pint >=0.19.0, <0.20
     - openff-utilities
   run_constrained:
     - openmm >7.6
@@ -45,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - mattwthompson
+    - j-wags
