@@ -1,11 +1,11 @@
-About openff-units
-==================
+About openff-units-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-units-feedstock/blob/main/LICENSE.txt)
 
 Home: https://openforcefield.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-units-feedstock/blob/main/LICENSE.txt)
 
 Summary: A common units module for the OpenFF software stack
 
