@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.8
     - numpy
-    - pint >=0.20.1, <0.21
+    - pint >=0.20.1, =0.21
     - openff-utilities
   run_constrained:
     - openmm >7.6
