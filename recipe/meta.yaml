@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-units/archive/{{ version }}.tar.gz
-  sha256: 38b59e5aefceb3f56df8f63248c0451f6904d310c6195d369678011fe42ae157
+  sha256: ed4fbb20fbf9889123785a3f753343526e815001533780d1267110c3752f9daa
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.8
     - numpy
-    - pint >=0.20.1, <0.21
+    - pint >=0.20.1|=0.21
     - openff-utilities
   run_constrained:
     - openmm >7.6
