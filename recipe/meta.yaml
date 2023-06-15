@@ -1,5 +1,5 @@
 {% set name = "openff-units" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-units/archive/{{ version }}.tar.gz
-  sha256: ed4fbb20fbf9889123785a3f753343526e815001533780d1267110c3752f9daa
+  sha256: 35578e85a82ac54195462b8dde95e0ab51330978e19ee9789bd0a25aa05af4dc
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,7 +19,7 @@ requirements:
     - python
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - numpy
     - pint =0.21
     - openff-utilities
