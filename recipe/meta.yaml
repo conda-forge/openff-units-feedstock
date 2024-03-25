@@ -33,6 +33,10 @@ test:
     - openff.units
     - openff.units.openmm
     - openff.units.elements
+  files:
+    - test_units.py
+  commands:
+    - python test_units.py
 
 about:
   home: https://openforcefield.org/
