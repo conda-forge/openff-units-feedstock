@@ -1,5 +1,5 @@
 {% set name = "openff-units" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 {% set python_min = python_min|default("0.1a0") %}  # due to a bug in conda-build
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-units/archive/{{ version }}.tar.gz
-  sha256: 532746534c1937938580d5cfe98f414aff9bfbcc66970e115a88a38f6d5a2581
+  sha256: 5274c4d2aaf37914810ca0f96d91925ac487b1726da34cf650a37b0674314a33
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
