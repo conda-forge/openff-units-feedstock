@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,6 +28,7 @@ requirements:
     - openff-utilities
   run_constrained:
     - openmm >7.6
+    - openff-toolkit-base >=0.16.8
 
 test:
   requires:
