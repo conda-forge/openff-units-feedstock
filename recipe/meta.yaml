@@ -1,6 +1,6 @@
 {% set org = "openforcefield" %}
 {% set name = "openff-units" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -13,18 +13,19 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python {{ python_min }}.*
     - setuptools
+    - setuptools_scm
     - pip
   run:
-    - python >={{ python_min }},<3.14.0a0
+    - python >={{ python_min }},<3.15.0a0
     - numpy
-    - pint >=0.24.0,<0.26  # dev-only
+    - pint >=0.24.0,<0.26
     - openff-utilities
   run_constrained:
     - openmm >7.6

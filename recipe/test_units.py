@@ -1,9 +1,15 @@
 """Test some basic behavior of the public classes."""
 
+from pint import __version__ as pint_version
+from openff.units import __version__ as openff_units_version
 from openff.units import Quantity, Unit, unit
 from openff.units.elements import MASSES, NUMBERS, SYMBOLS
 from openff.units.openmm import to_openmm, from_openmm
 
+
+assert openff_units_version != "0.0.0", "Version handling mangled!"
+
+print(f"Testing with {pint_version=} and {openff_units_version=}")
 
 [1, 2, 3] * unit.kilojoule_per_mole
 1.5 * Unit("nanometer")
