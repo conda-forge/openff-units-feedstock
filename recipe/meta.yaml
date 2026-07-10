@@ -13,7 +13,8 @@ source:
 build:
   noarch: python
   number: 0
-  script: build_base.sh
+  script:
+    file: build_base.sh
 
 requirements:
   host:
