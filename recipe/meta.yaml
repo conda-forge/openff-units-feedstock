@@ -1,20 +1,19 @@
 {% set org = "openforcefield" %}
 {% set name = "openff-units" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0beta1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/{{ org }}/{{ name }}.git
-  git_rev: {{ version }}
-  git_depth: -1
+  url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: f7c7d0e6d0934a8d344235979e8fc0b716bd905d0f31be7028ad1c45d5abda4d
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: build_base.sh
 
 requirements:
   host:
@@ -29,6 +28,7 @@ requirements:
     - openff-utilities
   run_constrained:
     - openmm >7.6
+    - pydantic >=2.13  # 2.12 or older might also work
 
 test:
   requires:
