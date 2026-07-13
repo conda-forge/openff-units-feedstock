@@ -1,11 +1,11 @@
 """Test some basic behavior of the public classes."""
 
-from pint import __version__ as pint_version
-from openff.units import __version__ as openff_units_version
+import pydantic
 from openff.units import Quantity, Unit, unit
+from openff.units import __version__ as openff_units_version
 from openff.units.elements import MASSES, NUMBERS, SYMBOLS
-from openff.units.openmm import to_openmm, from_openmm
-
+from openff.units.openmm import from_openmm, to_openmm
+from pint import __version__ as pint_version
 
 assert openff_units_version != "0.0.0", "Version handling mangled!"
 
@@ -22,6 +22,13 @@ assert NUMBERS["Hg"] == 80
 assert SYMBOLS[79] == "Au"
 
 assert from_openmm(to_openmm(Quantity("2.0 angstrom"))).m_as("angstrom") == 2.0
+
+
+class MyModel(pydantic.BaseModel):
+    x: Quantity
+
+
+assert MyModel(x=Quantity("1.234 angstrom")).x.m == 1.234
 
 print(
     "Tests appear to have passed!"
