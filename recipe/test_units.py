@@ -28,11 +28,13 @@ class MyModel(pydantic.BaseModel):
     x: Quantity
 
 
-assert MyModel(x=Quantity("1.234 angstrom")).x.m == 1.234
+my_model = MyModel(x=Quantity("1.234 angstrom"))
+assert my_model.x.m == 1.234
 
 print(
     "Tests appear to have passed!"
     f"\n{(0.5 * unit.kilojoule_per_mole)=},"
     f"\n{([4, 4, 4] * unit.nanometer)=},"
     f"\n{SYMBOLS[79]=}",
+    f"\n{my_model.x.m=}",
 )
