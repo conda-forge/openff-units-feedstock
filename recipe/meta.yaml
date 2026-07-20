@@ -1,6 +1,6 @@
 {% set org = "openforcefield" %}
 {% set name = "openff-units" %}
-{% set version = "0.4.0beta1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: f7c7d0e6d0934a8d344235979e8fc0b716bd905d0f31be7028ad1c45d5abda4d
+  sha256: 8df8ec4307769bc6473b87c0641a8eafb56eef4ff87cc10ba05eb6de362c26a6
 
 build:
   noarch: python

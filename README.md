@@ -35,14 +35,14 @@ Current release info
 Installing openff-units
 =======================
 
-Installing `openff-units` from the `conda-forge/label/openff-dev` channel can be achieved by adding `conda-forge/label/openff-dev` to your channels with:
+Installing `openff-units` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/openff-dev
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/openff-dev` channel has been enabled, `openff-units` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `openff-units` can be installed with `conda`:
 
 ```
 conda install openff-units
@@ -57,26 +57,26 @@ mamba install openff-units
 It is possible to list all of the versions of `openff-units` available on your platform with `conda`:
 
 ```
-conda search openff-units --channel conda-forge/label/openff-dev
+conda search openff-units --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search openff-units --channel conda-forge/label/openff-dev
+mamba search openff-units --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search openff-units --channel conda-forge/label/openff-dev
+mamba repoquery search openff-units --channel conda-forge
 
 # List packages depending on `openff-units`:
-mamba repoquery whoneeds openff-units --channel conda-forge/label/openff-dev
+mamba repoquery whoneeds openff-units --channel conda-forge
 
 # List dependencies of `openff-units`:
-mamba repoquery depends openff-units --channel conda-forge/label/openff-dev
+mamba repoquery depends openff-units --channel conda-forge
 ```
 
 
