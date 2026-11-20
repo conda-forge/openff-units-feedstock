@@ -3,7 +3,7 @@ schema_version: 1
 context:
   org: openforcefield
   name: openff-units
-  version: "0.4.0"
+  version: "0.4.0.post1"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/${{ org }}/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 8df8ec4307769bc6473b87c0641a8eafb56eef4ff87cc10ba05eb6de362c26a6
+  sha256: 3251d7cf2ae93d58e714af2365232208d77ee9e6bb1326d3336c10737044bbe3
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps
 
